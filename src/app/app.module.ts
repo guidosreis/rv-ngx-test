@@ -11,6 +11,9 @@ import { DetailsComponent } from './result-item/details/details.component';
 import { PriceHistoryComponent } from './result-item/price-history/price-history.component';
 import { AsideComponent } from './aside/aside.component';
 
+import { DatesSelectionService } from './services/dates-selection.service';
+import { HotelsService } from './services/hotels.service';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { AsideComponent } from './aside/aside.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    DatesSelectionService,
+    HotelsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
