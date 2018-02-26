@@ -8,6 +8,7 @@ import { DatesSelectionComponent } from './dates-selection/dates-selection.compo
 import { ResultListComponent } from './result-list/result-list.component';
 import { ResultItemComponent } from './result-item/result-item.component';
 import { DetailsComponent } from './result-item/details/details.component';
+import { PriceHistoryComponent } from './result-item/price-history/price-history.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DetailsComponent } from './result-item/details/details.component';
     DatesSelectionComponent,
     ResultListComponent,
     ResultItemComponent,
-    DetailsComponent
+    DetailsComponent,
+    PriceHistoryComponent
   ],
   imports: [
     BrowserModule
