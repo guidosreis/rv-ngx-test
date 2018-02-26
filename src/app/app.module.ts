@@ -12,8 +12,10 @@ import { DetailsComponent } from './result-item/details/details.component';
 import { PriceHistoryComponent } from './result-item/price-history/price-history.component';
 import { AsideComponent } from './aside/aside.component';
 
-import { DatesSelectionService } from './services/dates-selection.service';
 import { HotelsService } from './services/hotels.service';
+import { DatesSelectionService } from './services/dates-selection.service';
+import { PriceRangeService } from './services/price-range.service';
+import { RateService } from './services/rate.service';
 
 
 @NgModule({
@@ -33,8 +35,10 @@ import { HotelsService } from './services/hotels.service';
     FormsModule
   ],
   providers: [
+    HotelsService,
     DatesSelectionService,
-    HotelsService
+    PriceRangeService,
+    RateService
   ],
   bootstrap: [AppComponent]
 })
