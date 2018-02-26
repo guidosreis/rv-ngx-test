@@ -9,6 +9,7 @@ import { ResultListComponent } from './result-list/result-list.component';
 import { ResultItemComponent } from './result-item/result-item.component';
 import { DetailsComponent } from './result-item/details/details.component';
 import { PriceHistoryComponent } from './result-item/price-history/price-history.component';
+import { AsideComponent } from './aside/aside.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PriceHistoryComponent } from './result-item/price-history/price-history
     ResultListComponent,
     ResultItemComponent,
     DetailsComponent,
-    PriceHistoryComponent
+    PriceHistoryComponent,
+    AsideComponent
   ],
   imports: [
     BrowserModule
