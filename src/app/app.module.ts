@@ -17,6 +17,7 @@ import { DatesSelectionService } from './services/dates-selection.service';
 import { PriceRangeService } from './services/price-range.service';
 import { RateService } from './services/rate.service';
 import { NavComponent } from './hero/nav/nav.component';
+import { LogoComponent } from './hero/logo/logo.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NavComponent } from './hero/nav/nav.component';
     DetailsComponent,
     PriceHistoryComponent,
     AsideComponent,
-    NavComponent
+    NavComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
