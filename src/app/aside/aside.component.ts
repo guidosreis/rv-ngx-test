@@ -6,7 +6,7 @@ import { RateService } from '../services/rate.service';
 @Component({
   selector: 'app-aside',
   templateUrl: './aside.component.html',
-  styleUrls: ['./aside.component.css']
+  styleUrls: ['./aside.component.scss']
 })
 export class AsideComponent implements OnInit {
   priceRange: Array<number>;
