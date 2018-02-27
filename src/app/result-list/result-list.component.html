@@ -1,3 +1,2 @@
-<p>
-  result-list works!
-</p>
+<p *ngIf="!loading && !hotels.length">There is no results for filter applied. Please, try again with another values.</p>
+<app-result-item *ngFor="let hotel of hotels" [hotel]="hotel"></app-result-item>
