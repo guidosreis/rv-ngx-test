@@ -10,7 +10,7 @@ export class HotelsService {
   constructor(private http: HttpClient) { }
 
   getHotels(): Observable<Hotel[]> {
-    return this.http.get<Hotel[]>('assets/hotels.json');
+    return this.http.get<Hotel[]>('assets/json/hotels.json');
   }
 
 }
