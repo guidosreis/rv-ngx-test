@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Hotel } from '../models/hotel.model';
 
 @Component({
   selector: 'app-result-item',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result-item.component.css']
 })
 export class ResultItemComponent implements OnInit {
+  @Input() hotel: Hotel;
+
+  priceHistoryVisible: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    this.priceHistoryVisible = false;
+  }
+
+  showPriceHistory() {
+    this.priceHistoryVisible = true;
+  }
+
+  hidePriceHistory() {
+    this.priceHistoryVisible = false;
   }
 
 }
