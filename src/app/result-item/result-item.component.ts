@@ -5,7 +5,7 @@ import { Hotel } from '../models/hotel.model';
 @Component({
   selector: 'app-result-item',
   templateUrl: './result-item.component.html',
-  styleUrls: ['./result-item.component.css']
+  styleUrls: ['./result-item.component.scss']
 })
 export class ResultItemComponent implements OnInit {
   @Input() hotel: Hotel;
