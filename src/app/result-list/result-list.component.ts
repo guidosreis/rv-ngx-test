@@ -17,6 +17,7 @@ export class ResultListComponent implements OnInit, OnDestroy {
   priceRangeSub: Subscription;
   rateSub: Subscription;
 
+  loading: boolean;
   dates: any;
   priceRange: any;
   rate: number;
@@ -53,8 +54,12 @@ export class ResultListComponent implements OnInit, OnDestroy {
   }
 
   getHotels() {
+    this.loading = true;
+
     this.hotelsService.getHotels()
       .subscribe(hotels => {
+        this.loading = false;
+
         this.hotels = hotels.filter(hotel => {
           let aux = false;
 
