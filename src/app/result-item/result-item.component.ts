@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Hotel } from '../models/hotel.model';
 
@@ -7,14 +7,12 @@ import { Hotel } from '../models/hotel.model';
   templateUrl: './result-item.component.html',
   styleUrls: ['./result-item.component.scss']
 })
-export class ResultItemComponent implements OnInit {
+export class ResultItemComponent {
   @Input() hotel: Hotel;
 
   priceHistoryVisible: boolean;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
     this.priceHistoryVisible = false;
   }
 
