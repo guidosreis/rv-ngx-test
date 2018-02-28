@@ -1,3 +1,22 @@
-<p>
-  result-item works!
-</p>
+<article class="list-item">
+  <figure class="list-item__img">
+    <img [src]="hotel.image" [alt]="hotel.name">
+  </figure>
+  <ng-template *ngIf="!priceHistoryVisible">
+    <div class="list-item__body">
+      <ul class="list-item__rate">
+        <li *ngFor="let star of stars" class="list-item__star">
+  
+        </li>
+      </ul>
+      <h1 class="list-item__title">{{hotel.name}}</h1>
+      <p class="list-item__text">{{hotel.description}}</p>
+      <button type="button" class="btn btn-primary margin-right-l">Book now</button>
+      <button type="button" class="btn btn-secondary" (click)="showPriceHistory()">Price history</button>
+    </div>
+    <div class="list-item__price">
+      <span class="list-item__price-label">Total</span>
+      <span class="list-item__price-value">${{hotel.price}}</span>
+    </div>
+  </ng-template>
+</article>
