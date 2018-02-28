@@ -25,6 +25,8 @@
     "moment": "^2.20.1",
     "ng-pick-datetime": "^5.1.7",
     "ng-pick-datetime-moment": "^1.0.5",
+    "ng2-nouislider": "^1.7.7",
+    "nouislider": "^11.0.3",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
