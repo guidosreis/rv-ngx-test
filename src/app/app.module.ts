@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 // libs
 import { NouisliderModule } from 'ng2-nouislider';
+import { BarRatingModule } from "ngx-bar-rating";
 import { OwlDateTimeModule, OWL_DATE_TIME_FORMATS} from 'ng-pick-datetime';
 import { OwlMomentDateTimeModule } from 'ng-pick-datetime-moment';
 
@@ -43,6 +44,7 @@ import { LogoComponent } from './hero/logo/logo.component';
     HttpClientModule,
     FormsModule,
     NouisliderModule,
+    BarRatingModule,
     OwlDateTimeModule,
     OwlMomentDateTimeModule
   ],
