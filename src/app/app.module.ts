@@ -14,8 +14,6 @@ import { HeroComponent } from './hero/hero.component';
 import { DatesSelectionComponent } from './dates-selection/dates-selection.component';
 import { ResultListComponent } from './result-list/result-list.component';
 import { ResultItemComponent } from './result-item/result-item.component';
-import { DetailsComponent } from './result-item/details/details.component';
-import { PriceHistoryComponent } from './result-item/price-history/price-history.component';
 import { AsideComponent } from './aside/aside.component';
 
 // services
@@ -34,8 +32,6 @@ import { LogoComponent } from './hero/logo/logo.component';
     DatesSelectionComponent,
     ResultListComponent,
     ResultItemComponent,
-    DetailsComponent,
-    PriceHistoryComponent,
     AsideComponent,
     NavComponent,
     LogoComponent
