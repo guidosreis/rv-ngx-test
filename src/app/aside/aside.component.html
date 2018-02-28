@@ -1,15 +1,24 @@
+<h2>Filters</h2>
 <!-- PRICE RANGE FILTER -->
 <div class="filter-group">
   <div class="filter-group__title">Price Range</div>
   <div class="range-slider">
+    <nouislider
+      [connect]="true"
+      [min]="minRange"
+      [max]="maxRange"
+      [step]="10"
+      [(ngModel)]="priceRange"
+      (ngModelChange)="onPriceRangeChange($event)"
+    ></nouislider>
     <div class="range-slider__info">
       <div class="range-slider__from">
         <span class="range-slider__label">Min</span>
-        <span class="range-slider__value">$100</span>
+        <span class="range-slider__value">${{priceRange[0]}}</span>
       </div>
       <div class="range-slider__to">
         <span class="range-slider__label">Max</span>
-        <span class="range-slider__value">$600</span>
+        <span class="range-slider__value">${{priceRange[1]}}</span>
       </div>
     </div>
   </div>
