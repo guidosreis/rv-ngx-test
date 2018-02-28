@@ -74,7 +74,7 @@ export class ResultListComponent implements OnInit, OnDestroy {
           }
 
           if (this.rate) {
-            aux = hotel.rate !== this.rate;
+            aux = hotel.rate === this.rate;
           }
 
           if (aux) return hotel;
