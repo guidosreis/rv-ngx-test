@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+
 import { Subscription } from 'rxjs/Subscription';
 
 import { Hotel } from '../models/hotel.model';
@@ -33,28 +34,32 @@ export class ResultListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.datesSub = this.datesService.dates
       .subscribe(dates => {
-        this.dates = {...dates};
-
-        this.getHotels();
+        if (dates) {
+          this.dates = {...dates};
+          this.getHotels();
+        }
       });
 
     this.priceRangeSub = this.priceRangeService.priceRange
       .subscribe(priceRange => {
-        this.priceRangeSub = {...priceRange};
-
-        this.getHotels();
+        if (priceRange) {
+          this.priceRange = {...priceRange};
+          this.getHotels();
+        }
       });
 
     this.rateSub = this.rateService.rate
       .subscribe(rate => {
-        this.rate = rate;
-
-        this.getHotels();
+        if (rate) {
+          this.rate = rate;
+          this.getHotels();
+        }
       });
   }
 
   getHotels() {
     this.loading = true;
+    this.hotels = [];
 
     this.hotelsService.getHotels()
       .subscribe(hotels => {
