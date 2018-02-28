@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 // libs
+import { NouisliderModule } from 'ng2-nouislider';
 import { OwlDateTimeModule, OWL_DATE_TIME_FORMATS} from 'ng-pick-datetime';
 import { OwlMomentDateTimeModule } from 'ng-pick-datetime-moment';
 
@@ -41,6 +42,7 @@ import { LogoComponent } from './hero/logo/logo.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
+    NouisliderModule,
     OwlDateTimeModule,
     OwlMomentDateTimeModule
   ],
