@@ -27,4 +27,5 @@
 <!-- RATE FILTER -->
 <div class="filter-group">
   <div class="filter-group__title">Stars</div>
+  <bar-rating [(rate)]="rate" (rateChange)="onRateChange($event)"></bar-rating>
 </div><!-- /END RATE FILTER -->
