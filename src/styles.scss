@@ -12,6 +12,48 @@
 
 /**
  *
+ * HERO
+ *
+ */
+.hero {
+  background: url('assets/img/hero.jpg') center center no-repeat;
+  background-size: cover;
+  height: 60px;
+
+  @media (min-width: 992px) {
+    & {
+      height: 600px;
+    }
+  }
+}
+
+/**
+ *
+ * NAV
+ *
+ */
+.navbar {
+  @media (min-width: 992px) {
+    & {
+      width: 340px;
+    }
+  }
+}
+
+.nav {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+/**
+ *
  * DATES SELECTION
  *
  */
