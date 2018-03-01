@@ -3,23 +3,23 @@
     <div class="col-lg-10 col-xl-8">
       <div class="dates-selection">
         <h2 class="text-center">Select the dates to stay in Charlotte</h2>
-        <div class="d-flex flex-wrap flex-md-nowrap justify-content-md-between">
-          <div class="dates-selection__calendar order-md-1 mb-4 mb-md-0">
+        <div class="d-flex flex-wrap flex-sm-nowrap justify-content-sm-between">
+          <div class="dates-selection__calendar order-sm-1 mb-4 mb-sm-0">
             <owl-date-time-inline
               [selectMode]="'range'"
               [pickerType]="'calendar'"
               [(ngModel)]="datesRange"
             ></owl-date-time-inline>
           </div>
-          <div class="dates-selection__dates order-md-0">
-            <div class="dates-selection__date">
+          <div class="dates-selection__dates order-sm-0">
+            <div class="dates-selection__date d-flex flex-nowrap flex-sm-wrap justify-content-between">
               <span class="dates-selection__label">Check-in</span>
               <span class="dates-selection__value">
                 <ng-container *ngIf="datesRange">{{datesRange[0] | amDateFormat:'LL'}}</ng-container>
                 <ng-container *ngIf="!datesRange">Choose a date</ng-container>
               </span>
             </div>
-            <div class="dates-selection__date">
+            <div class="dates-selection__date d-flex flex-nowrap flex-sm-wrap justify-content-between">
               <span class="dates-selection__label">Check-out</span>
               <span class="dates-selection__value">
                 <ng-container *ngIf="datesRange && datesRange[1]">{{datesRange[1] | amDateFormat:'LL'}}</ng-container>
