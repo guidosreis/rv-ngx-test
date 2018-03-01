@@ -6,6 +6,15 @@
 @import "~ng-pick-datetime/assets/style/picker.min.css";
 @import "~nouislider/distribute/nouislider.min.css";
 
+/**
+ *
+ * VARIABLES
+ *
+ */
+$gray: #555;
+$light-gray: #b5b5b5;
+$light-green: #79bd1a;
+
 .container-fluid {
   max-width: 1310px;
 }
@@ -69,10 +78,42 @@
     text-align: center;
   }
 
-  @media (min-width: 768px) {
+  &__date {
+    margin-bottom: map-get($spacers, 2);
+  }
+
+  &__label {
+    color: $gray;
+    font-size: 1.125em;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    color: $light-gray;
+  }
+
+  @media (min-width: 576px) {
     &__calendar,
     &__dates {
       width: auto;
+    }
+
+    &__date {
+      margin-bottom: map-get($spacers, 4);
+    }
+
+    &__label,
+    &__value {
+      display: block;
+      width: 100%;
+    }
+
+    &__label {
+      font-size: 1.375em;
+    }
+
+    &__value {
+      font-size: 1.25em;
     }
   }
 
@@ -106,14 +147,14 @@
 
 .owl-dt-calendar-table .owl-dt-calendar-cell-in-range,
 .owl-dt-calendar-table .owl-dt-calendar-cell-selected {
-  background-color: #79bd1a;
+  background-color: $light-green;
 }
 
 .owl-dt-calendar-cell-range-to .owl-dt-calendar-cell-selected {
-  color: #79bd1a;
-  background-color: #fff;
+  color: $light-green;
+  background-color: $white;
 }
 
 .owl-dt-calendar-table .owl-dt-calendar-cell-in-range {
-  color: #fff;
+  color: $white;
 }
