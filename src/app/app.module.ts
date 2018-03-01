@@ -9,6 +9,7 @@ import { NouisliderModule } from 'ng2-nouislider';
 import { BarRatingModule } from "ngx-bar-rating";
 import { OwlDateTimeModule, OWL_DATE_TIME_FORMATS} from 'ng-pick-datetime';
 import { OwlMomentDateTimeModule } from 'ng-pick-datetime-moment';
+import { MomentModule } from 'angular2-moment';
 
 // components
 import { AppComponent } from './app.component';
@@ -42,7 +43,8 @@ import { RateService } from './services/rate.service';
     NouisliderModule,
     BarRatingModule,
     OwlDateTimeModule,
-    OwlMomentDateTimeModule
+    OwlMomentDateTimeModule,
+    MomentModule
   ],
   providers: [
     HotelsService,
