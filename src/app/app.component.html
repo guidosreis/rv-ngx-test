@@ -1,7 +1,15 @@
 <app-hero></app-hero>
 <app-dates-selection></app-dates-selection>
-<ng-template *ngIf="selectedDates">
-  <h2>Best choices between {{selectedDates.start}} and {{selectedDates.end}}</h2>
-  <app-aside></app-aside>
-  <app-result-list></app-result-list>
-</ng-template>
+<div class="container-fluid">
+  <div class="row justify-content-between">
+    <div class="col-12">
+      <h2>Best choices between {{selectedDates?.start}} and {{selectedDates?.end}}</h2>
+    </div>
+    <div class="col-lg-3">
+      <app-aside></app-aside>
+    </div>
+    <div class="col-lg-8">
+      <!-- <app-result-list></app-result-list> -->
+    </div>
+  </div>
+</div>
