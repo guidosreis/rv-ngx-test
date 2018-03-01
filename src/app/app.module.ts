@@ -23,8 +23,6 @@ import { HotelsService } from './services/hotels.service';
 import { DatesSelectionService } from './services/dates-selection.service';
 import { PriceRangeService } from './services/price-range.service';
 import { RateService } from './services/rate.service';
-import { NavComponent } from './hero/nav/nav.component';
-import { LogoComponent } from './hero/logo/logo.component';
 
 
 @NgModule({
@@ -35,8 +33,6 @@ import { LogoComponent } from './hero/logo/logo.component';
     ResultListComponent,
     ResultItemComponent,
     AsideComponent,
-    NavComponent,
-    LogoComponent
   ],
   imports: [
     BrowserModule,
