@@ -298,3 +298,48 @@ body {
 .owl-dt-calendar-table .owl-dt-calendar-cell-in-range {
   color: $white;
 }
+
+/**
+ *
+ * OVERRIDE STYLES FOR NOUISLIDER COMPONENT
+ *
+ */
+.noUi-horizontal {
+  height: 5px;
+
+  .noUi-handle {
+    border-radius: 50%;
+    border: 4px solid $orange;
+    width: 20px;
+    height: 20px;
+    top: -8px;
+  }
+}
+
+.noUi-target {
+  background-color: $light-gray;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.noUi-connect {
+  background-color: $orange;
+}
+
+.noUi-origin {
+  &:last-child .noUi-handle {
+    right: 0 !important;
+  }
+}
+
+.noUi-handle {
+  &:before,
+  &:after {
+    display: none !important;
+  }
+}
