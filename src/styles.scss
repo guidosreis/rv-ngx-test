@@ -52,7 +52,7 @@ h2 {
     transition: all .3s linear;
   }
 
-  &__small {
+  &__sm {
     font-size: .75em;
     border-width: 1px;
   }
@@ -76,6 +76,11 @@ h2 {
   &__secondary {
     border-color: $light-green;
     color: $light-green;
+
+    &:not(:disabled):hover {
+      background-color: $light-green;
+      color: $white;
+    }
   }
 }
 
