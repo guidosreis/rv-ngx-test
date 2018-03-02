@@ -266,6 +266,49 @@ body {
 
 /**
  *
+ * ASIDE
+ *
+ */
+.filter-group {
+  padding: map-get($spacers, 4) 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-300;
+  }
+
+  &__title {
+    color: $light-gray;
+    font-family: 'Heebo', sans-serif;
+    font-size: .875em;
+  }
+}
+
+.range-slider {
+  &__to {
+    text-align: right;
+  }
+
+  &__label,
+  &__value {
+    display: block;
+  }
+
+  &__label {
+    color: $light-gray;
+    font-family: 'Heebo', sans-serif;
+    font-size: .875em;
+  }
+
+  &__value {
+    color: $orange;
+    font-size: 1.375em;
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+
+/**
+ *
  * OVERRIDE STYLES FOR PICK DATETIME COMPONENT
  *
  */
