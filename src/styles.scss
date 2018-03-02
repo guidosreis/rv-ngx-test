@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500');
+
 @import "~bootstrap/scss/bootstrap-reboot";
 @import "~bootstrap/scss/bootstrap-grid";
 @import "~bootstrap/scss/utilities";
@@ -27,11 +29,66 @@ $light-green: #79bd1a;
 .hero {
   background: url('assets/img/hero.jpg') center center no-repeat;
   background-size: cover;
-  height: 60px;
+  height: 90px;
+  padding-top: map-get($spacers, 3);
 
   @media (min-width: 992px) {
     & {
       height: 600px;
+    }
+  }
+}
+
+/**
+ *
+ * LOGO
+ *
+ */
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: map-get($spacers, 2);
+  color: $white;
+  text-transform: uppercase;
+  font-size: 1em;
+
+  &__icon {
+    width: 30px;
+  }
+
+  &__label,
+  &__name {
+    display: none;
+  }
+
+  @media (min-width: 992px) {
+    & {
+      margin-bottom: 0;
+    }
+
+    &__icon {
+      width: 54px;
+      margin-bottom: map-get($spacers, 3);
+    }
+
+    &__label,
+    &__name {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    &__label {
+      font-size: 1.375em;
+    }
+
+    &__name {
+      font-size: 4.75em;
+      border-top: 2px solid $white;
+      border-bottom: 2px solid $white;
+      margin: map-get($spacers, 3) 0;
+      padding: map-get($spacers, 3) map-get($spacers, 5);
     }
   }
 }
