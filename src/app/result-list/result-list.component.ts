@@ -68,6 +68,10 @@ export class ResultListComponent implements OnInit, OnDestroy {
         this.hotels = hotels.filter(hotel => {
           let aux = false;
 
+          if (!this.priceRange && !this.rate) {
+            return hotel;
+          }
+
           if (this.priceRange) {
             let {min, max} = this.priceRange;
             aux = (hotel.price >= min && hotel.price <= max);
