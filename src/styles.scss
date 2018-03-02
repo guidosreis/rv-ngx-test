@@ -19,11 +19,18 @@ $light-gray: #b5b5b5;
 $light-green: #79bd1a;
 
 body {
-  font-size: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container-fluid {
   max-width: 1310px;
+}
+
+h2 {
+  font-weight: 400;
+  color: $black;
+  font-size: 1.375em;
+  margin-bottom: map-get($spacers, 5);
 }
 
 /**
@@ -270,7 +277,8 @@ body {
  *
  */
 .filter-group {
-  padding: map-get($spacers, 4) 0;
+  padding-top: map-get($spacers, 3);
+  padding-bottom: map-get($spacers, 4);
 
   &:not(:last-child) {
     border-bottom: 1px solid $gray-300;
