@@ -4,7 +4,7 @@
       <div class="dates-selection">
         <h2 class="text-center">Select the dates to stay in Charlotte</h2>
         <div class="d-flex flex-wrap flex-sm-nowrap justify-content-sm-between">
-          <div class="dates-selection__calendar order-sm-1 mb-4 mb-sm-0">
+          <div class="dates-selection__calendar order-sm-1 mb-3 mb-sm-0">
             <owl-date-time-inline
               [selectMode]="'range'"
               [pickerType]="'calendar'"
@@ -26,7 +26,9 @@
                 <ng-container *ngIf="!datesRange || !datesRange[1]">Choose a date</ng-container>
               </span>
             </div>
-            <button type="button" class="btn btn-primary">Search hotels</button>
+            <div class="text-center text-sm-left">
+              <button type="button" class="btn btn__primary" [disabled]="!datesRange || !datesRange[1]">Search hotels</button>
+            </div>
           </div>
         </div>
       </div>
