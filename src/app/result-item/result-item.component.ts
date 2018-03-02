@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { Hotel } from '../models/hotel.model';
 
@@ -7,13 +7,18 @@ import { Hotel } from '../models/hotel.model';
   templateUrl: './result-item.component.html',
   styleUrls: ['./result-item.component.scss']
 })
-export class ResultItemComponent {
+export class ResultItemComponent implements OnInit {
   @Input() hotel: Hotel;
 
+  stars: number[];
   priceHistoryVisible: boolean;
 
   constructor() {
     this.priceHistoryVisible = false;
+  }
+
+  ngOnInit() {
+    this.stars = Array.from(Array(this.hotel.rate).keys());
   }
 
   showPriceHistory() {
