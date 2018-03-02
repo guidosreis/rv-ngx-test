@@ -1,17 +1,17 @@
-<article class="list-item d-flex align-items-center">
+<article class="list-item d-flex flex-wrap flex-md-nowrap align-items-md-center">
   <figure class="list-item__img">
     <img [src]="hotel.image" [alt]="hotel.name">
   </figure>
   <div class="list-item__body">
     <ng-template [ngIf]="!priceHistoryVisible">
-      <div class="d-flex align-items-center">
+      <div class="d-md-flex align-items-center">
         <div class="list-item__about">
           <div class="list-item__rate">
             <object
               type="image/svg+xml"
               data="assets/svg/star-filled.svg"
               *ngFor="let star of stars"
-              class="list-item__start"
+              class="list-item__star"
             >Your browser does not support SVGs</object>
           </div>
           <h1 class="list-item__title">{{hotel.name}}</h1>
@@ -19,7 +19,7 @@
           <button type="button" class="btn btn__primary btn__sm mr-3">Book now</button>
           <button type="button" class="btn btn__secondary btn__sm" (click)="showPriceHistory()">Price history</button>
         </div>
-        <div class="list-item__price">
+        <div class="list-item__price d-flex flex-md-wrap align-items-center">
           <span class="list-item__price-label">Total</span>
           <span class="list-item__price-value">${{hotel.price}}</span>
         </div>
