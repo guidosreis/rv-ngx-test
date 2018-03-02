@@ -20,13 +20,13 @@ export class AsideComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.minRange = 0;
+    this.minRange = 100;
     this.maxRange = 600;
     this.priceRange = [this.minRange, this.maxRange];
   }
 
   onPriceRangeChange(priceRange) {
-    let data = {
+    const data = {
       min: priceRange[0],
       max: priceRange[1]
     };
