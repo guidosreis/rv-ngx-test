@@ -1,22 +1,29 @@
-<article class="list-item">
+<article class="list-item d-flex align-items-center">
   <figure class="list-item__img">
     <img [src]="hotel.image" [alt]="hotel.name">
   </figure>
-  <ng-template *ngIf="!priceHistoryVisible">
-    <div class="list-item__body">
-      <ul class="list-item__rate">
-        <li *ngFor="let star of stars" class="list-item__star">
-  
-        </li>
-      </ul>
-      <h1 class="list-item__title">{{hotel.name}}</h1>
-      <p class="list-item__text">{{hotel.description}}</p>
-      <button type="button" class="btn btn-primary margin-right-l">Book now</button>
-      <button type="button" class="btn btn-secondary" (click)="showPriceHistory()">Price history</button>
-    </div>
-    <div class="list-item__price">
-      <span class="list-item__price-label">Total</span>
-      <span class="list-item__price-value">${{hotel.price}}</span>
-    </div>
-  </ng-template>
+  <div class="list-item__body">
+    <ng-template [ngIf]="!priceHistoryVisible">
+      <div class="d-flex align-items-center">
+        <div class="list-item__about">
+          <div class="list-item__rate">
+            <object
+              type="image/svg+xml"
+              data="assets/svg/star-filled.svg"
+              *ngFor="let star of stars"
+              class="list-item__start"
+            >Your browser does not support SVGs</object>
+          </div>
+          <h1 class="list-item__title">{{hotel.name}}</h1>
+          <p class="list-item__text">{{hotel.description}}</p>
+          <button type="button" class="btn btn__primary btn__sm mr-3">Book now</button>
+          <button type="button" class="btn btn__secondary btn__sm" (click)="showPriceHistory()">Price history</button>
+        </div>
+        <div class="list-item__price">
+          <span class="list-item__price-label">Total</span>
+          <span class="list-item__price-value">${{hotel.price}}</span>
+        </div>
+      </div>
+    </ng-template>
+  </div>
 </article>
