@@ -27,7 +27,12 @@
               </span>
             </div>
             <div class="text-center text-sm-left">
-              <button type="button" class="btn btn__primary" [disabled]="!datesRange || !datesRange[1]">Search hotels</button>
+              <button
+                type="button"
+                class="btn btn__primary"
+                [disabled]="!datesRange || !datesRange[1]"
+                (click)="selectDates()"
+              >Search hotels</button>
             </div>
           </div>
         </div>
