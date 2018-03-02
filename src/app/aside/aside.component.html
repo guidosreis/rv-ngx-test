@@ -11,7 +11,7 @@
       [(ngModel)]="priceRange"
       (ngModelChange)="onPriceRangeChange($event)"
     ></nouislider>
-    <div class="range-slider__info">
+    <div class="d-flex justify-content-between">
       <div class="range-slider__from">
         <span class="range-slider__label">Min</span>
         <span class="range-slider__value">${{priceRange[0]}}</span>
