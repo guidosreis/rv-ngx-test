@@ -465,6 +465,57 @@ h2 {
 
 /**
  *
+ * FOOTER
+ *
+ */
+.footer {
+  -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.13);
+     -moz-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.13);
+          box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.13);
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  padding: map-get($spacers, 3) 0;
+
+  @media (min-width: 992px) {
+    & {
+      padding: map-get($spacers, 4) 0;
+    }
+  }
+}
+.copyright {
+  color: $light-gray;
+  font-size: 0.75em;
+  margin-bottom: 0;
+}
+
+/**
+ *
+ * SOCIAL
+ *
+ */
+.social {
+  margin-bottom: map-get($spacers, 3);
+
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.625em;
+  }
+
+  &__icon {
+    width: 2.125em;
+  }
+
+  @media (min-width: 992px) {
+    & {
+      margin-bottom: map-get($spacers, 4);
+    }
+  }
+}
+
+/**
+ *
  * OVERRIDE STYLES FOR PICK DATETIME COMPONENT
  *
  */
