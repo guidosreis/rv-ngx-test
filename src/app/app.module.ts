@@ -24,6 +24,7 @@ import { HotelsService } from './services/hotels.service';
 import { DatesSelectionService } from './services/dates-selection.service';
 import { PriceRangeService } from './services/price-range.service';
 import { RateService } from './services/rate.service';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { RateService } from './services/rate.service';
     ResultListComponent,
     ResultItemComponent,
     AsideComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
