@@ -348,6 +348,11 @@ h2 {
     padding-bottom: map-get($spacers, 3);
   }
 
+  &__heading {
+    position: relative;
+    z-index: 999;
+  }
+
   &__star {
     width: 1em;
     height: 1em;
@@ -358,12 +363,12 @@ h2 {
 
   &__title,
   &__text {
-    font-size: 0.875em;
+    font-family: 'Heebo', sans-serif;
+    font-size: .875em;
   }
 
   &__title {
     color: $orange;
-    font-family: 'Heebo', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: map-get($spacers, 2);
@@ -372,6 +377,24 @@ h2 {
   &__text {
     color: $light-gray;
     margin-bottom: map-get($spacers, 3);
+  }
+
+  &__back-link {
+    color: $gray-700;
+    font-family: 'Heebo', sans-serif;
+    font-size: .75em;
+    text-decoration: none !important;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__back-icon {
+    width: map-get($spacers, 4);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5em;
   }
 
   &__price-label {
@@ -398,12 +421,20 @@ h2 {
       margin-right: map-get($spacers, 4);
     }
 
+    &__body {
+      flex-grow: 1;
+    }
+
     &__about {
       border-bottom: 0;
       border-right: 1px solid $gray-200;
       margin-bottom: 0;
       padding-bottom: 0;
       padding-right: map-get($spacers, 4);
+    }
+
+    &__back-icon {
+      margin-right: 7.5em;
     }
 
     &__price {
@@ -592,4 +623,14 @@ h2 {
   &:after {
     display: none !important;
   }
+}
+
+/**
+ *
+ * OVERRIDE STYLES FOR CHARTJS COMPONENT
+ *
+ */
+.chartjs-render-monitor {
+  max-width: 100%;
+  margin-top: -50px;
 }

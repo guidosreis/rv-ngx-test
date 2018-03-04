@@ -12,18 +12,39 @@
               data="assets/svg/star-filled.svg"
               *ngFor="let star of stars"
               class="list-item__star"
-            >Your browser does not support SVGs</object>
+            ></object>
           </div>
           <h1 class="list-item__title">{{hotel.name}}</h1>
           <p class="list-item__text">{{hotel.description}}</p>
           <button type="button" class="btn btn__primary btn__sm mr-3">Book now</button>
           <button type="button" class="btn btn__secondary btn__sm" (click)="showPriceHistory()">Price history</button>
         </div>
-        <div class="list-item__price d-flex flex-md-wrap align-items-center">
+        <div class="list-item__price d-flex flex-md-wrap align-items-center justify-content-center">
           <span class="list-item__price-label">Total</span>
           <span class="list-item__price-value">${{hotel.price}}</span>
         </div>
       </div>
+    </ng-template>
+    <ng-template [ngIf]="priceHistoryVisible && chartData">
+      <div class="list-item__heading d-flex justify-content-between">
+        <h1 class="list-item__title mb-0">Price history for 2017</h1>
+        <a href="#" class="list-item__back-link" (click)="hidePriceHistory($event)">
+          <object
+            type="image/svg+xml"
+            data="assets/svg/back-description.svg"
+            class="list-item__back-icon"
+          ></object>
+          Back to
+        </a>
+      </div>
+      <canvas #history baseChart
+        [data]="chartData"
+        [labels]="chartLabels"
+        [options]="chartOptions"
+        [chartType]="'bar'"
+        [legend]="false"
+        [colors]="chartColors"
+      ></canvas>
     </ng-template>
   </div>
 </article>
