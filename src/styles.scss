@@ -27,6 +27,11 @@ body {
   max-width: 1310px;
 }
 
+a:focus,
+button:focus {
+  outline: none;
+}
+
 h2 {
   font-weight: 400;
   color: $black;
