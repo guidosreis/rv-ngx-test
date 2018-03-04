@@ -1,13 +1,13 @@
 export class Hotel {
-  name: String;
-  description: String;
-  image: String;
+  name: string;
+  description: string;
+  image: string;
   rate: number;
   price: number;
   price_history: [
     {
-      month: String,
+      month: string,
       value: number
     }
-  ]
+  ];
 }
