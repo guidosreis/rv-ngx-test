@@ -31,7 +31,11 @@ h2 {
   font-weight: 400;
   color: $black;
   font-size: 1.375em;
-  margin-bottom: map-get($spacers, 5);
+  margin-bottom: map-get($spacers, 3);
+
+  @media (min-width: 768px) {
+    margin-bottom: map-get($spacers, 5);
+  }
 }
 
 /**
@@ -221,6 +225,7 @@ h2 {
  */
 .dates-selection {
   background-color: $white;
+  margin-bottom: map-get($spacers, 4);
 
   &__calendar,
   &__dates {
@@ -246,6 +251,10 @@ h2 {
   }
 
   @media (min-width: 576px) {
+    & {
+      margin-bottom: 0;
+    }
+
     &__calendar,
     &__dates {
       width: auto;
