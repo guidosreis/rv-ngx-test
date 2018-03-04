@@ -9,6 +9,7 @@ import { NouisliderModule } from 'ng2-nouislider';
 import { OwlDateTimeModule, OWL_DATE_TIME_FORMATS} from 'ng-pick-datetime';
 import { OwlMomentDateTimeModule } from 'ng-pick-datetime-moment';
 import { MomentModule } from 'angular2-moment';
+import { BarRatingModule } from 'ngx-bar-rating';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 // components
@@ -46,6 +47,7 @@ import { FooterComponent } from './footer/footer.component';
     OwlDateTimeModule,
     OwlMomentDateTimeModule,
     MomentModule,
+    BarRatingModule,
     ChartsModule
   ],
   providers: [
