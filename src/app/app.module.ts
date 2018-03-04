@@ -6,10 +6,10 @@ import { FormsModule } from '@angular/forms';
 
 // libs
 import { NouisliderModule } from 'ng2-nouislider';
-import { BarRatingModule } from "ngx-bar-rating";
 import { OwlDateTimeModule, OWL_DATE_TIME_FORMATS} from 'ng-pick-datetime';
 import { OwlMomentDateTimeModule } from 'ng-pick-datetime-moment';
 import { MomentModule } from 'angular2-moment';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 // components
 import { AppComponent } from './app.component';
@@ -43,10 +43,10 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     FormsModule,
     NouisliderModule,
-    BarRatingModule,
     OwlDateTimeModule,
     OwlMomentDateTimeModule,
-    MomentModule
+    MomentModule,
+    ChartsModule
   ],
   providers: [
     HotelsService,
