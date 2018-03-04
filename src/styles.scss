@@ -8,6 +8,7 @@
 
 @import "~ng-pick-datetime/assets/style/picker.min.css";
 @import "~nouislider/distribute/nouislider.min.css";
+@import '~ngx-bar-rating/themes/br-default-theme';
 
 /**
  *
@@ -547,10 +548,26 @@ h2 {
 
 /**
  *
+ * OVERRIDE STYLES FOR BAR RATING COMPONENT
+ *
+ */
+.br {
+  margin: map-get($spacers, 2) 0 !important;
+}
+.br-defaut .br-unit {
+  font-size: 1.625em;
+  line-height: 1;
+}
+.br-default .br-active:after,
+.br-default .br-selected:after {
+  color: $yellow;
+}
+
+/**
+ *
  * OVERRIDE STYLES FOR PICK DATETIME COMPONENT
  *
  */
-
 .owl-dt-inline-container {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
