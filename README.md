@@ -10,10 +10,13 @@ Esse é um teste para a vaga de desenvolvedor front-end na Red Ventures. Foi des
 ```bash
 $ git clone https://github.com/guidosreis/rv-ngx-test
 $ cd rv-ngx-test
-$ npm start
+$ yarn install
 ```
 
 ## Como executar
 ```bash
-$ npm start
+$ yarn start
 ```
+
+## Observações
+* Caso não queira usar o Yarn, sinta-se livre para usar o npm. 
